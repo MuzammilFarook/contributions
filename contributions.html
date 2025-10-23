@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imthiyaz and Muzammil Contributions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .header-section {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header-title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .stats-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .stats-card-gradient-1 {
+            background: var(--primary-gradient);
+            color: white;
+        }
+        
+        .stats-card-gradient-2 {
+            background: var(--success-gradient);
+            color: white;
+        }
+        
+        .stats-card-gradient-3 {
+            background: var(--warning-gradient);
+            color: white;
+        }
+        
+        .stats-icon {
+            font-size: 3rem;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .stats-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .stats-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .table-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        
+        .table-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+        
+        .custom-table {
+            margin: 0;
+        }
+        
+        .custom-table thead {
+            background: var(--primary-gradient);
+            color: white;
+        }
+        
+        .custom-table thead th {
+            border: none;
+            padding: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+        
+        .custom-table tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .custom-table tbody tr:hover {
+            background-color: #f8f9ff;
+            transform: scale(1.01);
+            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.1);
+        }
+        
+        .custom-table tbody td {
+            padding: 15px;
+            vertical-align: middle;
+        }
+        
+        .badge-upi {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .badge-cash {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .badge-jummah {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .amount-cell {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.1rem;
+        }
+        
+        .name-cell {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .bill-badge {
+            background: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #495057;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+            .stats-value {
+                font-size: 2rem;
+            }
+        }
+        
+        .scroll-hint {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <div class="container text-center">
+            <h1 class="header-title">
+                <i class="fas fa-hand-holding-heart"></i> Imthiyaz and Muzammil Contributions
+            </h1>
+            <p class="header-subtitle">Comprehensive Contribution Records & Statistics</p>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card stats-card stats-card-gradient-1">
+                    <div class="card-body text-center py-4">
+                        <div class="stats-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="stats-value">₹13,05,650</div>
+                        <div class="stats-label">Total Contributions</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stats-card stats-card-gradient-2">
+                    <div class="card-body text-center py-4">
+                        <div class="stats-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="stats-value">₹4,49,550</div>
+                        <div class="stats-label">UPI Payments</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stats-card stats-card-gradient-3">
+                    <div class="card-body text-center py-4">
+                        <div class="stats-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="stats-value">₹8,56,100</div>
+                        <div class="stats-label">Cash Payments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h2 class="table-title">
+                <i class="fas fa-list-alt"></i> Detailed Contribution Records
+            </h2>
+            <div class="table-responsive">
+                <table class="table custom-table table-hover">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Payment Method</th>
+                            <th>Bill No</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="name-cell">Basheera Abdur Rahman</td>
+                            <td class="amount-cell">₹25,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">101</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="name-cell">Faiz Ahmed - Mylan</td>
+                            <td class="amount-cell">₹12,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">102</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="name-cell">Ashraf Ali - Krishnagiri</td>
+                            <td class="amount-cell">₹15,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">103</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="name-cell">Abdul Majid Shaik</td>
+                            <td class="amount-cell">₹2,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="name-cell">Syed Mohammed</td>
+                            <td class="amount-cell">₹2,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="name-cell">Saqib - Mylan</td>
+                            <td class="amount-cell">₹550</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="name-cell">Mujeeb Ref</td>
+                            <td class="amount-cell">₹1,500</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">104</span></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="name-cell">Mujeeb Ref</td>
+                            <td class="amount-cell">₹1,500</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">105</span></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td class="name-cell">Yusuf Khan</td>
+                            <td class="amount-cell">₹60,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">106</span></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td class="name-cell">Jumma Collection - Shanthi Nagar</td>
+                            <td class="amount-cell">₹2,700</td>
+                            <td><span class="badge-jummah"><i class="fas fa-book"></i> Jummah Book</span></td>
+                            <td><span class="bill-badge">107-110</span></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td class="name-cell">MN Makkal Group USA</td>
+                            <td class="amount-cell">₹25,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">111</span></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td class="name-cell">Shagul Hameed</td>
+                            <td class="amount-cell">₹1,00,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">112</span></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td class="name-cell">Muneer Bhai</td>
+                            <td class="amount-cell">₹7,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">113</span></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td class="name-cell">Siddikha</td>
+                            <td class="amount-cell">₹2,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">114</span></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td class="name-cell">Meraj Hasan</td>
+                            <td class="amount-cell">₹2,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td class="name-cell">Kasim MK Battery</td>
+                            <td class="amount-cell">₹500</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td class="name-cell">Aasim Vaniyambadi</td>
+                            <td class="amount-cell">₹1,200</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td class="name-cell">Abdul Shaik US</td>
+                            <td class="amount-cell">₹7,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">115</span></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td class="name-cell">kasim amadeus</td>
+                            <td class="amount-cell">₹27,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">116</span></td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td class="name-cell">Yaseen Hosur</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td class="name-cell">Mohammed Rehan (Mujeeb)</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">117</span></td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td class="name-cell">Maqbool (Arif)</td>
+                            <td class="amount-cell">₹7,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">118</span></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td class="name-cell">Tabassum Bano (Arif)</td>
+                            <td class="amount-cell">₹56,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">119</span></td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td class="name-cell">Riyaz</td>
+                            <td class="amount-cell">₹4,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">120</span></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td class="name-cell">suhail</td>
+                            <td class="amount-cell">₹5,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">121</span></td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td class="name-cell">Sageer Pasha</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">122</span></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td class="name-cell">Haneefa</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td class="name-cell">Abdul Thowheed</td>
+                            <td class="amount-cell">₹100</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td class="name-cell">Musafir</td>
+                            <td class="amount-cell">₹4,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">123</span></td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td class="name-cell">Alam sha</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td class="name-cell">Afzal Pasha</td>
+                            <td class="amount-cell">₹4,500</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">124</span></td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td class="name-cell">Dilroz basha(syed Gouse)</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">125</span></td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td class="name-cell">Mylan Rizwan</td>
+                            <td class="amount-cell">₹5,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">126</span></td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td class="name-cell">Mylan Zahir</td>
+                            <td class="amount-cell">₹5,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">127</span></td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td class="name-cell">Mylan Janib Basha</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">128</span></td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td class="name-cell">Saleem Friends</td>
+                            <td class="amount-cell">₹2,700</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">129</span></td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td class="name-cell">Mohammed Ishthiyaq</td>
+                            <td class="amount-cell">₹7,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">130</span></td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td class="name-cell">Zaquar rahman Jafri</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td class="name-cell">Nadeem Arafath</td>
+                            <td class="amount-cell">₹5,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">131</span></td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td class="name-cell">Razia Begam</td>
+                            <td class="amount-cell">₹10,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">132</span></td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td class="name-cell">Ayesha</td>
+                            <td class="amount-cell">₹5,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">133</span></td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td class="name-cell">muhammed aariz</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">140</span></td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td class="name-cell">Basha jaffar ali</td>
+                            <td class="amount-cell">₹2,500</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">134</span></td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td class="name-cell">allah ka bandha</td>
+                            <td class="amount-cell">₹7,700</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">135</span></td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td class="name-cell">nihal & friends</td>
+                            <td class="amount-cell">₹20,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">136</span></td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td class="name-cell">KM zakria sahib & Dilsath bhi</td>
+                            <td class="amount-cell">₹5,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">137</span></td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td class="name-cell">Kafeel</td>
+                            <td class="amount-cell">₹50,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">142</span></td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td class="name-cell">Mohammed Asgar</td>
+                            <td class="amount-cell">₹50,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">138</span></td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td class="name-cell">Shadab</td>
+                            <td class="amount-cell">₹7,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">139</span></td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td class="name-cell">Waseem -Mylan</td>
+                            <td class="amount-cell">₹15,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">143</span></td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td class="name-cell">Wasif</td>
+                            <td class="amount-cell">₹50,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">145</span></td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td class="name-cell">Premier Water chemicals</td>
+                            <td class="amount-cell">₹15,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">146</span></td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td class="name-cell">Ashiq bhai -Nehru Nagar Madurai</td>
+                            <td class="amount-cell">₹10,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">141</span></td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td class="name-cell">Muzammil</td>
+                            <td class="amount-cell">₹4,00,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">144</span></td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td class="name-cell">Marhoom Saleema</td>
+                            <td class="amount-cell">₹10,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">451</span></td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td class="name-cell">Umera Banu</td>
+                            <td class="amount-cell">₹1,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">147</span></td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td class="name-cell">Munna Bhai</td>
+                            <td class="amount-cell">₹1,12,200</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">148</span></td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td class="name-cell">Marhoom yousuff</td>
+                            <td class="amount-cell">₹7,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">149</span></td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td class="name-cell">Waheed Ireland</td>
+                            <td class="amount-cell">₹20,000</td>
+                            <td><span class="badge-cash"><i class="fas fa-money-bill-wave"></i> Cash</span></td>
+                            <td><span class="bill-badge">-</span></td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td class="name-cell">Khadar Ireland</td>
+                            <td class="amount-cell">₹1,00,000</td>
+                            <td><span class="badge-upi"><i class="fas fa-mobile-alt"></i> UPI</span></td>
+                            <td><span class="bill-badge">-</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="scroll-hint"><i class="fas fa-info-circle"></i> Scroll horizontally on mobile devices to view all columns</p>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 mt-5" style="background: var(--primary-gradient); color: white;">
+        <p class="mb-0">© 2025 Imthiyaz and Muzammil Contributions | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
